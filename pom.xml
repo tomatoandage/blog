@@ -20,6 +20,7 @@
 		<module>blog-web</module>
 		<module>blog-admin</module>
 		<module>blog-common</module>
+		<module>blog-jwt</module>
 	</modules>
 
 
@@ -38,6 +39,7 @@
 		<commons-lang3.version>3.17.0</commons-lang3.version>
 		<jackson-databind.version>2.18.1</jackson-databind.version>
 		<knife4j.version>4.5.0</knife4j.version>
+		<mybatis-plus.version>3.5.5</mybatis-plus.version>
 	</properties>
 
 	<!--统一依赖管理-->
@@ -72,6 +74,11 @@
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
 				<version>${jackson-databind.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+				<version>${mybatis-plus.version}</version>
 			</dependency>
 
 		</dependencies>
