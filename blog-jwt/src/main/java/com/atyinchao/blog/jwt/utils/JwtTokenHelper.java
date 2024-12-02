@@ -1,4 +1,4 @@
-package com.atyinchao.blog.jwt.helper;
+package com.atyinchao.blog.jwt.utils;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

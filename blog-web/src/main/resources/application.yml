@@ -3,3 +3,8 @@ spring:
     name: blog-web
   profiles:
     active: dev
+jwt:
+  # 签发人
+  issuer: yinchao
+  # 秘钥
+  secret: NrHESgyJFqLNP5D6sK8e4I3UBxoGgmJLKk4eFozGYiu3qOx6er4uq2QxiWvyylCjVvsg4SfVl06kmT2z9JhUuw==
