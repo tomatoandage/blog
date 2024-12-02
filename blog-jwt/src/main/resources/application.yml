@@ -1,0 +1,5 @@
+jwt:
+  # 签发人
+  issuer: yinchao
+  # 秘钥
+  secret: jElxcSUj38+Bnh73T68lNs0DfBSit6U3whQlcGO2XwnI+Bo3g4xsiCIPg8PV/L0fQMis08iupNwhe2PzYLB9Xg==

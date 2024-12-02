@@ -23,6 +23,14 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+			<groupId>com.atyinchao</groupId>
+			<artifactId>blog-jwt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>

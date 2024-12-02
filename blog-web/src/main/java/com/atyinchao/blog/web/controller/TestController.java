@@ -10,6 +10,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.stream.Collectors;
@@ -23,9 +24,15 @@ import java.util.stream.Collectors;
 @Slf4j
 public class TestController {
 
-    @PostMapping("/test")
+    @RequestMapping("/admin/test")
     @ApiOperationLog(description = "测试接口")
-    public Response test(@RequestBody @Validated User user) {
+    public Response test() {
+        return Response.success();
+    }
+
+    @RequestMapping("/test")
+    @ApiOperationLog(description = "测试接口")
+    public Response test1() {
         return Response.success();
     }
 }
