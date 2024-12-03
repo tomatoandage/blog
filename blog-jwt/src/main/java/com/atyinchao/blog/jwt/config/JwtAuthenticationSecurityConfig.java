@@ -3,6 +3,7 @@ package com.atyinchao.blog.jwt.config;
 import com.atyinchao.blog.jwt.filter.JwtAuthenticationFilter;
 import com.atyinchao.blog.jwt.handler.RestAuthenticationFailureHandler;
 import com.atyinchao.blog.jwt.handler.RestAuthenticationSuccessHandler;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,16 +23,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 public class JwtAuthenticationSecurityConfig extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {
 
-    @Autowired
+    @Resource
     private RestAuthenticationSuccessHandler restAuthenticationSuccessHandler;
 
-    @Autowired
+    @Resource
     private RestAuthenticationFailureHandler restAuthenticationFailureHandler;
 
-    @Autowired
+    @Resource
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
+    @Resource
     private UserDetailsService userDetailsService;
 
     @Override

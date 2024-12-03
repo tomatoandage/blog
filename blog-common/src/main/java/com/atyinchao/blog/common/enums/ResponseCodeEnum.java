@@ -23,6 +23,8 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
     //参数校验错误
     PARAM_NOT_VALID("10001","参数错误"),
 
+    UNAUTHORIZED("20002", "无访问权限，请先登录！"),
+
     ;
 
     private final String errorCode;

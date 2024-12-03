@@ -4,6 +4,7 @@ import com.atyinchao.blog.common.utils.Response;
 import com.atyinchao.blog.jwt.utils.JwtTokenHelper;
 import com.atyinchao.blog.jwt.utils.ResultUtil;
 import com.atyinchao.blog.jwt.model.LoginRspVO;
+import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -24,7 +25,7 @@ import java.io.IOException;
 @Component
 @Slf4j
 public class RestAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
-    @Autowired
+    @Resource
     private JwtTokenHelper jwtTokenHelper;
 
     @Override

@@ -1,5 +1,6 @@
 package com.atyinchao.blog.jwt.filter;
 
+import com.atyinchao.blog.jwt.config.PasswordEncoderConfig;
 import com.atyinchao.blog.jwt.exception.UsernameOrPasswordNullException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

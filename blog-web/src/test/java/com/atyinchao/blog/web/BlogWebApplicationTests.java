@@ -2,11 +2,15 @@ package com.atyinchao.blog.web;
 
 import com.atyinchao.blog.common.domain.dos.UserDO;
 import com.atyinchao.blog.common.domain.mapper.UserMapper;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.crypto.SecretKey;
 import java.util.Date;
 
 @SpringBootTest
@@ -41,6 +45,14 @@ class BlogWebApplicationTests {
 		// 占位符
 		String author = "yinchao";
 		log.info("这是一行带有占位符日志，作者：{}", author);
+	}
+
+	@Test
+	void testJwt(){
+		SecretKey key = Jwts.SIG.HS256.key().build();
+		String compactJws = Jwts.builder().subject("yinchao").signWith(key).compact();
+		System.out.println(compactJws);
+		Jws<Claims> claimsJws = Jwts.parser().verifyWith(key).build().parseSignedClaims(compactJws);
 	}
 
 }
