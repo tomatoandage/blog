@@ -122,10 +122,9 @@ public class JwtTokenHelper implements InitializingBean {
      */
     public String getUsernameByToken(String token) {
         try {
-            Claims claims = (Claims) jwtParser.parseSignedClaims(token);
-            return claims.getSubject();
+            return jwtParser.parseSignedClaims(token).getPayload().getSubject();
         } catch (Exception e) {
-            e.printStackTrace();
+            e.fillInStackTrace();
         }
         return null;
     }
