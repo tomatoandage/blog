@@ -2,6 +2,7 @@ package com.atyinchao.blog.jwt.utils;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
+import lombok.Data;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -25,7 +26,7 @@ public class JwtTokenHelper implements InitializingBean {
     /**
      * 签发人
      */
-    @Value("${jwt.issuer")
+    @Value("${jwt.issuer}")
     private String issuer;
 
     /**
