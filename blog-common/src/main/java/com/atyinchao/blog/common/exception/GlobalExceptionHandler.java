@@ -4,11 +4,13 @@ import com.atyinchao.blog.common.enums.ResponseCodeEnum;
 import com.atyinchao.blog.common.utils.Response;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.InsufficientAuthenticationException;
+import org.springframework.security.authorization.AuthorizationDeniedException;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Optional;
@@ -33,6 +35,13 @@ public class GlobalExceptionHandler {
     public Response<Object> handleBussesException(HttpServletRequest request, BusinessException e) {
         log.warn("{} request fail, errorCode: {}, errorMessage: {}", request.getRequestURI(), e.getErrorCode(), e.getErrorMessage());
         return Response.fail(e);
+    }
+
+    @ExceptionHandler({ AuthorizationDeniedException.class})
+    public void throwAccessDeniedException(AuthorizationDeniedException e) throws AccessDeniedException {
+        //捕获到鉴权失败异常，主动抛出，交给 RestAccessDeniedHandler 去处理
+        log.info("============= 捕获到 AuthorizationDeniedException");
+        throw e;
     }
 
     /**
@@ -84,6 +93,8 @@ public class GlobalExceptionHandler {
 
         return Response.fail(errorCode,errorMessage);
     }
+
+
 
 
 }
