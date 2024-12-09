@@ -27,6 +27,10 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
 
     FORBIDDEN("20004", "你的权限不够呢，快联系管理员获取权限吧！！"),
 
+    CATEGORY_IS_EXISTS("20005","分类已存在"),
+
+    CATEGORY_IS_NOT_EXISTS("20006","分类不存在"),
+
     ;
 
     private final String errorCode;
