@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @Description
+ * @Description 分页插件
  * @Author yinchao
  * @Date 2024/12/2
  */

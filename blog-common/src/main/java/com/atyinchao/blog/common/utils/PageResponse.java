@@ -15,7 +15,7 @@ import java.util.Objects;
  **/
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class PageResponse<T> extends Response<List<T>>{
+public class PageResponse<K,V> extends Response<List<V>>{
 
     /**
      * 总记录数
@@ -37,8 +37,8 @@ public class PageResponse<T> extends Response<List<T>>{
      */
     private long pages;
 
-    public static <T> PageResponse<T> success(IPage<T> page, List<T> data) {
-        PageResponse<T> response = new PageResponse<>();
+    public static <K,V> PageResponse<K,V> success(IPage<K> page, List<V> data) {
+        PageResponse<K,V> response = new PageResponse<>();
         response.setSuccess(true);
         response.setCurrentPage(Objects.isNull(page) ? 1L : page.getCurrent());
         response.setTotal(Objects.isNull(page) ? 0L : page.getTotal());

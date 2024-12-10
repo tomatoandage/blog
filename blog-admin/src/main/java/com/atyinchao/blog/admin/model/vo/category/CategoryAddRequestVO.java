@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.checkerframework.checker.units.qual.Length;
+import org.hibernate.validator.constraints.Length;
 
 /**
  * @ClassName CategoryAddRequestVO
@@ -26,7 +26,6 @@ import org.checkerframework.checker.units.qual.Length;
 public class CategoryAddRequestVO {
 
     @NotBlank(message = "分类名称不能为空")
-    @Min(value = 1L, message = "分类名称长度不小于2个字符")
-    @Max(value = 10L, message = "分类名称长度不高于10个字符")
+    @Length(min = 1, max = 10, message = "分类名称限制在1-10个字符")
     private String name;
 }
