@@ -40,6 +40,7 @@ public class AdminCategoryController {
     @Schema(name = "分类分页查询")
     @ApiOperationLog(description = "分类分页查询")
     public PageResponse<CategoryDO,CategoryPageListResponseVO> page(@RequestBody @Validated CategoryPageListRequestVO categoryPageListRequestVO){
-        return categoryService.page(categoryPageListRequestVO);
+        PageResponse<CategoryDO, CategoryPageListResponseVO> page = categoryService.page(categoryPageListRequestVO);
+        return page;
     }
 }

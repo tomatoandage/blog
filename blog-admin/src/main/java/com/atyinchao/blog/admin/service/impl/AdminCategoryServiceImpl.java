@@ -88,7 +88,7 @@ public class AdminCategoryServiceImpl implements AdminCategoryService {
                     .map(categoryDO -> CategoryPageListResponseVO.builder()
                             .id(categoryDO.getId())
                             .name(categoryDO.getName())
-                            .createTime(categoryDO.getCreateTime())
+                            .createTime(categoryDO.getCreateTime().toString())
                             .build())
                     .toList();
         }

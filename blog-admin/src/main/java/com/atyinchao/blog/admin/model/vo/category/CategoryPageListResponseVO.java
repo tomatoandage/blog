@@ -25,5 +25,5 @@ public class CategoryPageListResponseVO {
 
     private String name;
 
-    private Date createTime;
+    private String createTime;
 }
