@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.*;
  **/
 @RestController
 @Tag(name = "分类操作类")
-@RequestMapping("/category")
+@RequestMapping("/admin/category")
 public class AdminCategoryController {
 
     @Resource
@@ -39,8 +39,7 @@ public class AdminCategoryController {
     @PostMapping("/page")
     @Schema(name = "分类分页查询")
     @ApiOperationLog(description = "分类分页查询")
-    public PageResponse<CategoryDO,CategoryPageListResponseVO> page(@RequestBody @Validated CategoryPageListRequestVO categoryPageListRequestVO){
-        PageResponse<CategoryDO, CategoryPageListResponseVO> page = categoryService.page(categoryPageListRequestVO);
-        return page;
+    public PageResponse<CategoryPageListResponseVO> page(@RequestBody @Validated CategoryPageListRequestVO categoryPageListRequestVO){
+        return categoryService.page(categoryPageListRequestVO);
     }
 }

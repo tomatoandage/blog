@@ -16,5 +16,5 @@ import com.atyinchao.blog.common.utils.Response;
 public interface AdminCategoryService {
     Response<String> addCategory(CategoryAddRequestVO categoryAddRequestVO);
 
-    PageResponse<CategoryDO,CategoryPageListResponseVO> page(CategoryPageListRequestVO categoryPageListRequestVO);
+    PageResponse<CategoryPageListResponseVO> page(CategoryPageListRequestVO categoryPageListRequestVO);
 }

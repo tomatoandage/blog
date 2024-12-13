@@ -63,7 +63,7 @@ public class AdminCategoryServiceImpl implements AdminCategoryService {
      * 根据条件分页查询
      */
     @Override
-    public PageResponse<CategoryDO,CategoryPageListResponseVO> page(CategoryPageListRequestVO categoryPageListRequestVO) {
+    public PageResponse<CategoryPageListResponseVO> page(CategoryPageListRequestVO categoryPageListRequestVO) {
         long currentPage = categoryPageListRequestVO.getCurrentPage();
         long size = categoryPageListRequestVO.getSize();
         Page<CategoryDO> page= new Page<>(currentPage,size);
@@ -93,6 +93,6 @@ public class AdminCategoryServiceImpl implements AdminCategoryService {
                     .toList();
         }
 
-        return PageResponse.success(categoryDOPage, vos);
+        return PageResponse.success(categoryDOPage,vos);
     }
 }
