@@ -3,6 +3,10 @@ spring:
     name: blog-web
   profiles:
     active: dev
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
 jwt:
   issuer: yinchao
   secret: NrHESgyJFqLNP5D6sK8e4I3UBxoGgmJLKk4eFozGYiu3qOx6er4uq2QxiWvyylCjVvsg4SfVl06kmT2z9JhUuw==

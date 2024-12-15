@@ -32,3 +32,8 @@ knife4j:
   enable: true
   setting:
     language: zh_cn
+minio:
+  endpoint: http://127.0.0.1:9000
+  accessKey: yinchao
+  secretKey: 3219815800
+  bucketName: blog

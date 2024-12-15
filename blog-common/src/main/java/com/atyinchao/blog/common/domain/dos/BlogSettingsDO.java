@@ -6,29 +6,35 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
 /**
- * @ClassName TagDO
  * @Description
- * @Date 2024/12/13 16:40
  * @Author yinchao
- **/
+ * @Date 2024/12/15
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_tag")
-public class TagDO {
+@TableName("t_blog_settings")
+public class BlogSettingsDO {
 
     private Long id;
 
+    private String logo;
+
     private String name;
 
-    private Date createTime;
+    private String author;
 
-    private Date updateTime;
+    private String introduction;
 
-    private boolean isDeleted;
+    private String avatar;
 
+    private String github_homepage;
+
+    private String csdn_homepage;
+
+    private String gitee_homepage;
+
+    private String zhihu_homepage;
 }

@@ -1,5 +1,6 @@
 package com.atyinchao.blog.admin.model.vo.tag;
 
+import com.atyinchao.blog.common.model.BasePageQuery;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +19,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class TagPageListRequestVO {
+public class TagPageListRequestVO extends BasePageQuery {
 
     private String name;
 

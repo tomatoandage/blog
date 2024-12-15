@@ -31,7 +31,7 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
 
     CATEGORY_IS_NOT_EXISTS("20006","分类不存在"),
 
-    ;
+    FILE_UPLOAD_FAILED("20007","上传文件失败！" );
 
     private final String errorCode;
 
