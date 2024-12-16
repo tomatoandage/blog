@@ -30,11 +30,11 @@ public class BlogSettingsDO {
 
     private String avatar;
 
-    private String github_homepage;
+    private String githubHomepage;
 
-    private String csdn_homepage;
+    private String csdnHomepage;
 
-    private String gitee_homepage;
+    private String giteeHomepage;
 
-    private String zhihu_homepage;
+    private String zhihuHomepage;
 }
