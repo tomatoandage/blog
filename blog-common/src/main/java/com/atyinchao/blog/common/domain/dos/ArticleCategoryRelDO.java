@@ -16,4 +16,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class ArticleCategoryRelDO {
+
+    private Long id;
+
+    private Long articleId;
+
+    private Long categoryId;
 }
